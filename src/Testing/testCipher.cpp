@@ -45,9 +45,12 @@ std::map<CipherType, std::string> decryptText {
     {CipherType::Vigenere, "KFANIDQLGTOJWRMZUPCXSFAVID"}
 };
 
+/*
+Just an aside, conceptually I don't really like using maps/pairs here to access the cipher type.
+I don't know if there's a way to tell, after calling cipherFactory, what the specific type of cipher
+returned is or if you should instead add an attribute to speicfy this.
+*/
 std::map<CipherType, std::unique_ptr<Cipher>> cipherCollection;
-
-
 
 TEST_CASE("Cipher encryption", "encrypt")
 {
