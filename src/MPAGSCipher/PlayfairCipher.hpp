@@ -2,6 +2,7 @@
 #define MPAGSCIPHER_PLAYFAIRCIPHER_HPP
 
 #include "CipherMode.hpp"
+#include "Cipher.hpp"
 
 #include <map>
 #include <string>
@@ -15,7 +16,7 @@
  * \class PlayfairCipher
  * \brief Encrypt or decrypt text using the Playfair cipher with the given key
  */
-class PlayfairCipher {
+class PlayfairCipher : public Cipher {
   public:
     /**
      * \brief Create a new PlayfairCipher with the given key
